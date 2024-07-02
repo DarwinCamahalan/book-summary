@@ -11,125 +11,119 @@
     />
     <script src="https://cdn.tailwindcss.com/3.4.4?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,line-clamp@0.4.4,container-queries@0.1.1"></script>
   </head>
-  <body>
-    <!-- Main Content Wrapper -->
+  <body class="font-sans">
+    <!-- Main Container -->
     <div>
-      <!-- Navigation Bar Container -->
+      <!-- Scroll to Top Widget -->
+      <!-- <a href="#navbar" class="absolute left-5 bottom-5 z-10">
+        <div class="flex flex-col justify-center items-center ">
+          <p class="text-2xl">↑</p>
+          <p>Scroll to Top</p>
+        </div>
+      </a> -->
+      <!-- Navigation Bar -->
       <nav
-        class="w-full min-h-20 flex flex-wrap py-5 items-center justify-between px-5 md:px-10"
+        id="navbar"
+        class="flex items-center justify-center h-26 py-7 lg:px-10 md:px-3 text-lg"
       >
-        <div class="flex items-center flex-grow md:flex-grow-0">
-          <!-- Nav Logo Container -->
-          <div class="mr-4">
-            <a href="/" class="flex items-center">
-              <img
-                class="h-auto w-12 md:w-16"
-                src="https://img.icons8.com/?size=100&id=oRWpxfuiPopH&format=png&color=000000"
-                alt="BookSummary Logo"
-              />
-              <h1 class="text-lg md:text-xl ml-2">
-                BOOK
-                <span class="m-0 p-0 font-medium text-xl md:text-2xl">S</span>
-                UMMARY
-              </h1>
-            </a>
-          </div>
-          <!-- Nav Items Container -->
-          <div class="hidden md:flex text-sm md:text-lg ml-10">
-            <a
-              href="/"
-              class="mr-4 md:mr-6 hover:border-b-2 border-yellow-500 pb-1"
-            >
-              Our Content
-            </a>
-            <a
-              href="/"
-              class="mr-4 md:mr-6 hover:border-b-2 border-yellow-500 pb-1"
-            >
-              Pricing
-            </a>
-            <a href="/" class="hover:border-b-2 border-yellow-500 pb-1">
-              About
-            </a>
-          </div>
+        <!-- Logo -->
+        <div class="flex-none items-center">
+          <a href="#" class="flex items-center text-2xl">
+            <img
+              class="w-10 h-auto mr-2"
+              src="https://img.icons8.com/?size=100&id=oRWpxfuiPopH&format=png&color=000000"
+              alt="Header Logo"
+            />
+            <h1 class="tracking-widest font-extralight">BOOKSUMMARY</h1>
+          </a>
+        </div>
+        <!-- Menu Icon in Mobile Screen -->
+        <div class="md:hidden flex w-full justify-end pr-5">
+          <img
+            class="md:hidden w-8 h-auto hover:cursor-pointer"
+            src="https://img.icons8.com/?size=100&id=3096&format=png&color=000000"
+            alt="Menu Icon"
+          />
         </div>
 
-        <!-- Nav Buttons Container -->
-        <div class="flex mt-4 md:mt-0 text-sm md:text-xl">
-          <button
-            class="rounded-full border-gray-500 border px-4 md:px-7 py-2 hover:bg-yellow-500 hover:border-yellow-500"
+        <!-- Nav Pages -->
+        <div class="hidden lg:flex text-md lg:space-x-7 px-10">
+          <a class="hover:border-b-2 border-yellow-500" href="#">Our Content</a>
+          <a class="hover:border-b-2 border-yellow-500" href="#">Pricing</a>
+          <a class="hover:border-b-2 border-yellow-500" href="#">About</a>
+        </div>
+        <!-- Nav Buttons -->
+        <div class="grow">
+          <div
+            class="hidden md:flex md:justify-end md:space-x-6 md:font-semibold"
           >
-            Login →
-          </button>
-          <button
-            class="rounded-full bg-yellow-400 hover:bg-yellow-500 px-4 md:px-5 py-2 font-medium ml-3 md:ml-5"
-          >
-            Sign up for free
-          </button>
+            <button
+              class="border-gray-500 border py-2 px-8 rounded-full hover:bg-yellow-500 hover:border-yellow-500"
+            >
+              Login →
+            </button>
+            <button class="bg-yellow-400 px-5 rounded-full hover:bg-yellow-500">
+              Sign up for free
+            </button>
+          </div>
         </div>
       </nav>
+      <!-- Navigation Bar -->
 
       <!-- Main Banner -->
-      <main
-        class="w-full min-h-screen flex flex-col lg:flex-row relative p-5 md:p-10"
-      >
-        <!-- Absolute Elements for Design -->
+      <main class="w-full h-screen relative">
+        <!-- Yellow Background Banner Styling -->
         <div
-          class="absolute bg-yellow-500 move-backward bottom-0 left-0 bg-banner"
+          class="absolute w-full h-1/3 bg-yellow-500 bottom-0 right-0"
+          style="z-index: -1"
         ></div>
+        <!-- Added style attribute because z-0 does not work -->
 
-        <!-- Upper Banner Content -->
-        <div class="flex flex-col lg:flex-row">
-          <!-- Banner Text Info -->
-          <div class="flex flex-col flex-grow lg:basis-1/2 p-5 md:p-10 mt-12">
-            <!-- toggle button component -->
-            <div
-              class="flex w-48 h-12 p-1 border rounded-full shadow-md text-center align-middle mb-6"
-            >
-              <a
-                href="/"
-                class="flex bg-black w-20 h-10 pt-2 pl-3 rounded-full text-white"
-              >
-                ⭐4.5
-              </a>
-              <span class="pt-2 pl-3 font-semibold">Top Rating</span>
+        <!-- Two Column Container -->
+        <div class="w-full h-screen flex flex-col">
+          <!-- Top Column -->
+          <div class="basis-2/3">
+            <!-- Banner Contents Top-->
+            <div class="flex flex-col lg:flex-row justify-center lg:px-10">
+              <!-- Banner Text -->
+              <div class="basis-1/2 px-3 py-3 lg:py-5 lg:px-10">
+                <!-- toggle button component -->
+                <div
+                  class="flex w-48 h-12 p-1 border rounded-full shadow-md text-center align-middle mb-6"
+                >
+                  <a
+                    href="#"
+                    class="flex bg-black w-20 h-10 pt-2 pl-3 rounded-full text-white"
+                  >
+                    ⭐4.5
+                  </a>
+                  <span class="pt-2 pl-3 font-semibold">Top Rating</span>
+                </div>
+                <h1 class="text-7xl font-bold my-5">
+                  Way more than book summaries.
+                </h1>
+                <p>
+                  BookSummary has the world’s best guides to 1000+ nonfiction
+                  books. Learn key points and gain insights you won't find
+                  anywhere else. Understand the world’s best ideas.
+                </p>
+              </div>
+
+              <!-- Banner Image -->
+              <div class="basis-1/2">
+                <img
+                  class="min-auto h-auto"
+                  src="assets/reading-book-illustration.png"
+                  alt="Reading Person Photo"
+                />
+              </div>
             </div>
-
-            <!-- Banner Text Content -->
-            <h1 class="font-bold text-4xl md:text-5xl lg:text-7xl">
-              Unlock new world through reading.
-            </h1>
-            <p class="mt-5 text-base md:text-lg">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Asperiores error assumenda pariatur autem, deserunt odit veritatis
-              odio reprehenderit voluptatibus officiis?
-            </p>
           </div>
-          <!-- Banner Image -->
-          <div
-            class="flex-grow lg:basis-1/2 mt-8 lg:mt-0 flex justify-center items-center"
-          >
-            <img
-              class="w-full max-w-xl h-auto"
-              src="assets/reading-book-illustration.png"
-              alt="Banner Image"
-            />
-          </div>
+          <!-- Buttom Column -->
+          <div class="basis-1/3"></div>
         </div>
       </main>
+      <!-- Main Banner -->
     </div>
   </body>
-
-  <style>
-    @layer utilities {
-      .bg-banner {
-        width: 99.5%;
-        height: 35%;
-      }
-
-      .move-backward {
-        z-index: -1;
-      }
-    }
-  </style>
 </html>
