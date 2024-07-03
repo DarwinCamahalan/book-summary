@@ -15,12 +15,46 @@
     <!-- Main Container -->
     <div>
       <!-- Scroll to Top Widget -->
-      <!-- <a href="#navbar" class="absolute left-5 bottom-5 z-10">
-        <div class="flex flex-col justify-center items-center ">
+      <!-- <a href="#navbar" id="test" class="hidden absolute left-5 bottom-5 z-10">
+        <div class="flex flex-col justify-center items-center">
           <p class="text-2xl">↑</p>
           <p>Scroll to Top</p>
         </div>
       </a> -->
+
+      <!-- Mobile Sidebar Menu -->
+      <div
+        id="sidebar"
+        class="hidden w-[100%] h-[100%] absolute top-0 right-0 bg-white z-10"
+      >
+        <div class="flex flex-row w-full pt-7">
+          <!-- Logo -->
+          <a href="#" class="basis-1/2 flex items-center text-2xl">
+            <img
+              class="w-10 h-auto mr-2"
+              src="https://img.icons8.com/?size=100&id=oRWpxfuiPopH&format=png&color=000000"
+              alt="Header Logo"
+            />
+            <h1 class="tracking-widest font-normal">BOOKSUMMARY</h1>
+          </a>
+          <div class="basis-1/2 flex flex-row justify-end pr-3">
+            <img
+              onclick="toggleMenu(false)"
+              class="w-8 h-8 hover:cursor-pointer pt-1"
+              src="https://img.icons8.com/?size=100&id=46&format=png&color=000000"
+              alt="Close Icon"
+            />
+          </div>
+        </div>
+        <div>
+          <h1>MENU 1</h1>
+          <h1>MENU 1</h1>
+          <h1>MENU 1</h1>
+          <h1>MENU 1</h1>
+          <h1>MENU 1</h1>
+        </div>
+      </div>
+
       <!-- Navigation Bar -->
       <nav
         id="navbar"
@@ -34,12 +68,13 @@
               src="https://img.icons8.com/?size=100&id=oRWpxfuiPopH&format=png&color=000000"
               alt="Header Logo"
             />
-            <h1 class="tracking-widest font-extralight">BOOKSUMMARY</h1>
+            <h1 class="tracking-widest font-normal">BOOKSUMMARY</h1>
           </a>
         </div>
         <!-- Menu Icon in Mobile Screen -->
         <div class="md:hidden flex w-full justify-end pr-5">
           <img
+            onclick="toggleMenu(true)"
             class="md:hidden w-8 h-auto hover:cursor-pointer"
             src="https://img.icons8.com/?size=100&id=3096&format=png&color=000000"
             alt="Menu Icon"
@@ -58,11 +93,13 @@
             class="hidden md:flex md:justify-end md:space-x-6 md:font-semibold"
           >
             <button
-              class="border-gray-500 border py-2 px-8 rounded-full hover:bg-yellow-500 hover:border-yellow-500"
+              class="border-gray-500 border py-2 px-8 rounded-full hover:bg-black hover:text-white"
             >
               Login →
             </button>
-            <button class="bg-yellow-400 px-5 rounded-full hover:bg-yellow-500">
+            <button
+              class="bg-yellow-400 px-5 rounded-full hover:bg-black hover:text-white"
+            >
               Sign up for free
             </button>
           </div>
@@ -71,12 +108,12 @@
       <!-- Navigation Bar -->
 
       <!-- Main Banner -->
-      <main class="w-full h-full relative">
+      <main class="w-full h-full relative flex justify-center items-center">
         <!-- Banner Contents Top-->
-        <div class="flex flex-col xl:flex-row justify-center lg:px-10">
+        <div class="flex flex-col xl:flex-row justify-center items-center">
           <!-- Banner Text -->
           <div
-            class="basis-1/2 px-3 py-3 lg:py-5 lg:px-10 h-screen px-5 xl:pt-20"
+            class="basis-1/2 h-screen w-full pl-6 pr-2 pt-6 pb-12 xl:pb-0 2xl:pt-24 2xl:pl-20"
           >
             <!-- toggle button component -->
             <div
@@ -90,7 +127,7 @@
               </a>
               <span class="pt-2 pl-3 font-semibold">Top Rating</span>
             </div>
-            <h1 class="text-5xl xl:text-7xl font-bold my-5">
+            <h1 class="text-4xl xl:text-7xl font-bold my-5">
               Way more than book summaries.
             </h1>
             <p class="mt-8 xl:mt-0">
@@ -99,7 +136,7 @@
               Understand the world’s best ideas.
             </p>
             <!-- Banner Text Buttons -->
-            <div class="mt-12 flex space-x-7">
+            <div class="mt-8 flex space-x-7">
               <button
                 class="bg-black hover:bg-yellow-400 hover:text-black text-white py-3 px-5 rounded-full font-semibold"
               >
@@ -114,7 +151,7 @@
           </div>
 
           <!-- Banner Image -->
-          <div class="flex-1 w-full pb-10 xl:pb-0">
+          <div class="flex-1 w-full py-10 xl:py-0">
             <img
               class="w-full h-auto"
               src="assets/reading-book-illustration.png"
@@ -124,36 +161,29 @@
         </div>
         <!-- Yellow Background Banner Styling -->
         <div
-          class="hidden xl:block lg:absolute lg:w-full lg:h-2/5 lg:bg-yellow-500 lg:bottom-0 lg:right-0"
-          style="z-index: -1"
-        >
-          <h1 class="text-center pt-40 text-4xl font-bold">
-            Why are BookSummary
-          </h1>
-          <h1 class="text-center text-4xl font-bold">
-            guides are
-            <span class="text-white border-b-4 border-yellow-400">
-              amazing?
-            </span>
-          </h1>
-          <p class="text-center pt-8 text-lg font-semibold text-gray-800">
-            You get more ideas and insights than anywhere else.
-          </p>
-        </div>
-        <!-- Added style attribute because z-0 does not work -->
+          class="hidden xl:block absolute w-full h-[35%] bottom-0 right-0 z-[-1]"
+          style="
+            background-image: url(assets/banner-style.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+        <!-- Added style attribute for background image because tailwind does not have it without customizing -->
       </main>
       <!-- Main Banner -->
 
       <!-- Second Section -->
-      <section class="w-full h-auto flex flex-col bg-yellow-500 items-center">
+      <section
+        class="w-full h-auto flex flex-col bg-yellow-500 items-center pt-10 xl:pt-0"
+      >
         <!-- Section Header in Mobile View -->
-        <div class="xl:hidden py-10 mt-8 mb-10 flex-none">
+        <div class="mt-8 mb-10 flex-none">
           <h1 class="text-center text-3xl xl:text-4xl font-bold">
             Why are BookSummary
           </h1>
           <h1 class="text-center text-3xl xl:text-4xl font-bold">
             guides are
-            <span class="text-yellow-100 border-b-4 border-yellow-800">
+            <span class="text-white border-b-4 border-yellow-400">
               amazing?
             </span>
           </h1>
@@ -165,7 +195,7 @@
         </div>
         <!-- 2nd Column -->
         <div
-          class="basis-1/2 flex flex-col xl:flex-row xl:pt-0 xl:space-x-10 space-y-16 xl:space-y-0 w-2/3"
+          class="basis-1/2 flex flex-col xl:flex-row xl:pt-0 xl:space-x-10 space-y-16 xl:space-y-0 w-[80%] xl:w-2/3 my-10"
         >
           <div
             class="basis-1/3 flex flex-col text-center items-center justify-center"
@@ -234,7 +264,7 @@
                 <span class="border-b-2 border-yellow-500">FREE</span> book
                 guide
               </h1>
-              <p class="font-semibold text-md pb-10 xl:pb-0">
+              <p class="font-semibold text-[0.97em] pb-10 xl:pb-0">
                 Sign up to get free samples of our world-class book insights.
               </p>
             </div>
@@ -249,7 +279,7 @@
                   class="basis-1/2 w-full border-0 text-md xl:text-lg rounded-full border-transparent focus:border-transparent focus:ring-0"
                 />
                 <button
-                  class="basis-1/2 w-full text-black text-md xl:text-lg font-semibold bg-yellow-400 rounded-full px-10 py-2 hover:bg-yellow-500"
+                  class="basis-1/2 w-full text-black text-md xl:text-lg font-semibold bg-yellow-400 rounded-full px-10 py-2 hover:bg-black hover:text-white"
                 >
                   Sign up
                 </button>
@@ -371,29 +401,36 @@
           </div>
         </div>
         <!-- Text -->
-        <div class="text-center py-10 font-semibold text-lg">
+        <div class="text-center py-10 font-semibold text-lg px-5">
           <p>and 20+ more categories.</p>
           <p>Explore all the categories you can learn from!</p>
         </div>
         <!-- Middle Button -->
-        <div class="w-full flex justify-center">
+        <div class="w-full flex justify-center mb-1 xl:mb-5">
           <button
-            class="border border-yellow-400 hover:bg-yellow-500 px-5 py-3 rounded-full text-lg font-semibold"
+            class="border border-yellow-400 hover:bg-yellow-400 px-5 py-3 rounded-full text-lg font-semibold"
           >
             Explore More
           </button>
         </div>
       </section>
       <!-- Fourth Section -->
-      <section class="flex w-full h-full bg-black px-20 py-20">
+      <section
+        class="flex flex-col xl:flex-row w-full h-full bg-black px-3 xl:pl-20 xl:pr-0 pt-10 xl:pt-20"
+        style="
+          background-image: url(/assets/games-bg.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+      >
         <!-- Section Text -->
-        <div class="basis-1/2 text-white">
+        <div class="basis-1/2 text-white px-3 xl:px-10 pb-8">
           <!-- Header -->
-          <div class="font-semibold text-6xl pb-5">
-            <h1>Now available on</h1>
+          <div class="font-semibold text-[2em] xl:text-5xl pb-5">
+            <h1 class="mb-1 xl:mb-2">Now available on</h1>
             <h1>Play Store & App Store</h1>
           </div>
-          <p>
+          <p class="mt-5 mb-10">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus,
             enim ea. Incidunt ab ipsa laborum nobis officia quam sit voluptatum
             quos praesentium nostrum. Deleniti rem eius dolorem atque error
@@ -402,9 +439,9 @@
             quae ducimus deserunt quibusdam!
           </p>
           <!-- Buttons -->
-          <div class="flex items-center justify-start">
+          <div class="flex items-center justify-start space-x-3">
             <button
-              class="w-96 bg-white text-black rounded-full px-4 py-3 my-5"
+              class="w-[10em] bg-white text-black rounded-full my-5 flex items-center justify-center py-2 hover:bg-yellow-400"
             >
               <img
                 class="w-10 h-auto mr-3"
@@ -414,7 +451,7 @@
               <p class="font-semibold">Play Store</p>
             </button>
             <button
-              class="w-96 bg-white text-black rounded-full px-4 py-3 my-5"
+              class="w-[10em] bg-white text-black rounded-full my-5 flex items-center justify-center py-2 hover:bg-yellow-400"
             >
               <img
                 class="w-10 h-auto mr-3"
@@ -425,12 +462,158 @@
             </button>
           </div>
         </div>
-        <div class="basis-1/2 relative">
-          <div class="absolute" style="top: -10em">
-            <img class="w-full h-auto" src="assets/Books.png" alt="Phone App" />
+        <div class="basis-1/2 relative flex items-center justify-center">
+          <div class="hidden xl:block absolute bottom-0">
+            <img
+              class="w-full h-auto"
+              src="assets/book-app.png"
+              alt="Phone App"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Fifth Section -->
+      <section class="w-full h-full flex flex-col items-center py-20">
+        <!-- Header -->
+
+        <p
+          class="text-md border-b-2 border-yellow-400 font-bold text-gray-600 mb-4"
+        >
+          PEOPLE ALSO LOVE
+        </p>
+        <h1 class="font-bold text-4xl">More Popular Books</h1>
+
+        <!-- Books -->
+        <div class="flex flex-col xl:flex-row w-full h-auto px-0 xl:px-48">
+          <!-- Card -->
+          <div class="basis-1/4 flex flex-col items-center justify-center">
+            <img
+              class="w-[80%] h-auto mt-12"
+              src="/assets/book-cover-1.jpg"
+              alt="Book Cover"
+            />
+            <!-- stars-->
+            <div class="flex flex-row items-center justify-center">
+              <img
+                class="w-[80%] xl:w-full h-auto mt-8 px-20"
+                src="assets/rating-stars.png"
+                alt="Rating Stars"
+              />
+            </div>
+            <!-- title -->
+            <div class="text-center mt-3">
+              <h1 class="font-bold text-lg">Forgotten Time</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!-- button -->
+            <div class="flex justify-center items-center">
+              <button
+                class="bg-black rounded-full px-5 py-2 text-white hover:bg-yellow-400 hover:text-black font-semibold mt-5"
+              >
+                Explore More
+              </button>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="basis-1/4 flex flex-col items-center justify-center">
+            <img
+              class="w-[80%] h-auto mt-12"
+              src="/assets/book-cover-2.jpg"
+              alt="Book Cover"
+            />
+            <!-- stars-->
+            <div class="flex flex-row items-center justify-center">
+              <img
+                class="w-[80%] xl:w-full h-auto mt-8 px-20"
+                src="assets/rating-stars.png"
+                alt="Rating Stars"
+              />
+            </div>
+            <!-- title -->
+            <div class="text-center mt-3">
+              <h1 class="font-bold text-lg">The Shadow</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!-- button -->
+            <div class="flex justify-center items-center">
+              <button
+                class="bg-black rounded-full px-5 py-2 text-white hover:bg-yellow-400 hover:text-black font-semibold mt-5"
+              >
+                Explore More
+              </button>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="basis-1/4 flex flex-col items-center justify-center">
+            <img
+              class="w-[75%] h-auto mt-12"
+              src="/assets/book-cover-3.jpg"
+              alt="Book Cover"
+            />
+            <!-- stars-->
+            <div class="flex flex-row items-center justify-center">
+              <img
+                class="w-[80%] xl:w-full h-auto mt-8 px-20"
+                src="assets/rating-stars.png"
+                alt="Rating Stars"
+              />
+            </div>
+            <!-- title -->
+            <div class="text-center mt-3">
+              <h1 class="font-bold text-lg">God of Titans</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!-- button -->
+            <div class="flex justify-center items-center">
+              <button
+                class="bg-black rounded-full px-5 py-2 text-white hover:bg-yellow-400 hover:text-black font-semibold mt-5"
+              >
+                Explore More
+              </button>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="basis-1/4 flex flex-col items-center justify-center">
+            <img
+              class="w-[80%] h-auto mt-12"
+              src="/assets/book-cover-4.jpg"
+              alt="Book Cover"
+            />
+            <!-- stars-->
+            <div class="flex flex-row items-center justify-center">
+              <img
+                class="w-[80%] xl:w-full h-auto mt-8 px-20"
+                src="assets/rating-stars.png"
+                alt="Rating Stars"
+              />
+            </div>
+            <!-- title -->
+            <div class="text-center mt-3">
+              <h1 class="font-bold text-lg">Storm Lords</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <!-- button -->
+            <div class="flex justify-center items-center">
+              <button
+                class="bg-black rounded-full px-5 py-2 text-white hover:bg-yellow-400 hover:text-black font-semibold mt-5"
+              >
+                Explore More
+              </button>
+            </div>
           </div>
         </div>
       </section>
     </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      function toggleMenu(isOpen) {
+        if (isOpen) {
+          document.getElementById("sidebar").style.display = "block";
+        } else {
+          document.getElementById("sidebar").style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
