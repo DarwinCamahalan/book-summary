@@ -12,50 +12,85 @@
     <script src="https://cdn.tailwindcss.com/3.4.4?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,line-clamp@0.4.4,container-queries@0.1.1"></script>
   </head>
   <body class="font-sans">
-    <!-- Main Container -->
-    <div>
-      <!-- Scroll to Top Widget -->
-      <!-- <a href="#navbar" id="test" class="hidden absolute left-5 bottom-5 z-10">
-        <div class="flex flex-col justify-center items-center">
-          <p class="text-2xl">↑</p>
-          <p>Scroll to Top</p>
-        </div>
-      </a> -->
-
-      <!-- Mobile Sidebar Menu -->
-      <div
-        id="sidebar"
-        class="w-[100%] h-[100%] absolute top-0 right-0 bg-white z-10"
-      >
-        <div class="flex flex-row w-full pt-7">
-          <!-- Logo -->
-          <a href="#" class="basis-1/2 flex items-center text-2xl">
-            <img
-              class="w-10 h-auto mr-2"
-              src="https://img.icons8.com/?size=100&id=oRWpxfuiPopH&format=png&color=000000"
-              alt="Header Logo"
-            />
-            <h1 class="tracking-widest font-normal">BOOKSUMMARY</h1>
-          </a>
-          <div class="basis-1/2 flex flex-row justify-end pr-3">
-            <img
-              onclick="toggleMenu(false)"
-              class="w-8 h-8 hover:cursor-pointer pt-1"
-              src="https://img.icons8.com/?size=100&id=46&format=png&color=000000"
-              alt="Close Icon"
-            />
-          </div>
-        </div>
-        <!-- Sidebar Menu Items -->
-        <div
-          class="w-full h-full flex flex-col space-y-4 py-10 px-4 text-2xl text-center"
-        >
-          <a href="#">Our Content</a>
-          <a href="#">Pricing</a>
-          <a href="#">About</a>
+    <!-- Mobile Sidebar Menu -->
+    <div
+      id="sidebar"
+      class="hidden w-[100%] h-[90%] absolute top-0 right-0 bg-white z-10"
+    >
+      <div class="flex flex-row w-full pt-7">
+        <!-- Logo -->
+        <a href="#" class="basis-1/2 flex items-center text-2xl">
+          <img
+            class="w-10 h-auto mr-2"
+            src="https://img.icons8.com/?size=100&id=oRWpxfuiPopH&format=png&color=000000"
+            alt="Header Logo"
+          />
+          <h1 class="tracking-widest font-normal">BOOKSUMMARY</h1>
+        </a>
+        <div class="basis-1/2 flex flex-row justify-end pr-3">
+          <img
+            onclick="toggleMenu(false)"
+            class="w-8 h-8 hover:cursor-pointer pt-1"
+            src="https://img.icons8.com/?size=100&id=46&format=png&color=000000"
+            alt="Close Icon"
+          />
         </div>
       </div>
-
+      <!-- Sidebar Menu Items -->
+      <div class="w-full h-full flex flex-col space-y-6 pt-10 px-3 text-md">
+        <!-- Nav Items -->
+        <div class="basis-1/2 flex flex-col space-y-3">
+          <a
+            href="#"
+            class="flex flex-row items-center space-x-5 bg-white rounded-r-full border-[1px] border-gray-500 px-4 py-3 pl-5 hover:bg-yellow-400 hover:text-black"
+          >
+            <img
+              class="w-8 h-auto"
+              src="https://img.icons8.com/?size=100&id=3649&format=png&color=000000"
+              alt="Book Icon"
+            />
+            <p>Our Content</p>
+          </a>
+          <a
+            href="#"
+            class="flex flex-row items-center space-x-5 bg-white rounded-r-full border-[1px] border-gray-500 px-4 py-3 pl-5 hover:bg-yellow-400 hover:text-black"
+          >
+            <img
+              class="w-8 h-auto"
+              src="https://img.icons8.com/?size=100&id=2971&format=png&color=000000"
+              alt="Book Icon"
+            />
+            <p>Pricing</p>
+          </a>
+          <a
+            href="#"
+            class="flex flex-row items-center space-x-5 bg-white rounded-r-full border-[1px] border-gray-500 px-4 py-3 pl-5 hover:bg-yellow-400 hover:text-black"
+          >
+            <img
+              class="w-8 h-auto"
+              src="https://img.icons8.com/?size=100&id=77&format=png&color=000000"
+              alt="Book Icon"
+            />
+            <p>About</p>
+          </a>
+        </div>
+        <!-- Nav Buttons -->
+        <div class="basis-1/2 flex flex-col justify-end space-y-3 pb-2">
+          <button
+            class="border-gray-500 border py-2 px-8 rounded-full hover:bg-black hover:text-white"
+          >
+            Login →
+          </button>
+          <button
+            class="bg-yellow-400 px-5 py-3 rounded-full hover:bg-black hover:text-white"
+          >
+            Sign up for free
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Main Container -->
+    <div id="main">
       <!-- Navigation Bar -->
       <nav
         id="navbar"
@@ -161,6 +196,7 @@
           </div>
         </div>
         <!-- Yellow Background Banner Styling -->
+        <!-- Added style attribute for background image because tailwind does not have it without customizing -->
         <div
           class="hidden xl:block absolute w-full h-[35%] bottom-0 right-0 z-[-1]"
           style="
@@ -169,7 +205,6 @@
             background-size: cover;
           "
         ></div>
-        <!-- Added style attribute for background image because tailwind does not have it without customizing -->
       </main>
       <!-- Main Banner -->
 
@@ -189,7 +224,7 @@
             </span>
           </h1>
           <p
-            class="text-center pt-8 text-md xl:text-lg font-semibold text-gray-800"
+            class="text-center pt-8 text-md xl:text-lg font-semibold text-gray-800 px-5"
           >
             You get more ideas and insights than anywhere else.
           </p>
@@ -416,6 +451,7 @@
         </div>
       </section>
       <!-- Fourth Section -->
+      <!-- Added style attribute for background image because tailwind does not have it without customizing -->
       <section
         class="flex flex-col xl:flex-row w-full h-full bg-black px-3 xl:pl-20 xl:pr-0 pt-10 xl:pt-20"
         style="
@@ -604,6 +640,236 @@
           </div>
         </div>
       </section>
+      <!-- Sixth Section -->
+      <section class="w-full h-full flex flex-col items-center">
+        <div
+          class="text-black flex flex-col items-center bg-yellow-400 py-10 w-[90%] xl:w-[70%] rounded-lg px-5"
+        >
+          <h1 class="font-bold text-xl xl:text-2xl xl:text-3xl py-5">
+            Try BookSummary for
+            <span class="text-white border-b-4 border-yellow-500">FREE</span>
+          </h1>
+          <p class="text-md xl:text-lg text-center">
+            Discover the world’s best ideas and apply them to
+            <br class="hidden xl:block" />
+            your life.
+          </p>
+          <button
+            class="bg-black px-5 py-3 rounded-full hover:bg-white hover:text-black h text-white mt-10 font-semibold text-lg"
+          >
+            Sign up for free
+          </button>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="w-100 h-full border-t-2 mt-32 flex flex-col items-center">
+        <!-- Top Section -->
+        <div
+          class="w-[90%] xl:w-[80%] border-b-2 flex flex-col xl:flex-row py-5 xl:py-3 items-center"
+        >
+          <!-- Footer Logo -->
+          <a href="#" class="basis-1/2 flex items-center text-2xl mb-8 xl:mb-0">
+            <img
+              class="w-10 h-auto mr-2"
+              src="https://img.icons8.com/?size=100&id=oRWpxfuiPopH&format=png&color=000000"
+              alt="Header Logo"
+            />
+            <h1 class="tracking-widest font-normal">BOOKSUMMARY</h1>
+          </a>
+          <!-- Footer Buttons -->
+          <div
+            class="basis-1/2 w-full h-full flex flex-col xl:flex-row xl:justify-end xl:space-x-4"
+          >
+            <button
+              class="w-full xl:w-[10em] bg-black text-white rounded-full xl:my-5 flex items-center justify-center py-2 hover:bg-yellow-400 hover:text-black"
+            >
+              <img
+                class="w-10 h-auto mr-3"
+                src="https://img.icons8.com/?size=100&id=rLQJIsR7jscN&format=png&color=000000"
+                alt="Play Store Icon"
+              />
+              <p class="font-semibold">Play Store</p>
+            </button>
+            <div class="xl:hidden w-full h-4"></div>
+            <button
+              class="w-full xl:w-[10em] bg-black text-white rounded-full xl:my-5 flex items-center justify-center py-2 hover:bg-yellow-400 hover:text-black"
+            >
+              <img
+                class="w-10 h-auto mr-3"
+                src="https://img.icons8.com/?size=100&id=4PbFeZOKAc61&format=png&color=000000"
+                alt="Play Store Icon"
+              />
+              <p class="font-semibold">App Store</p>
+            </button>
+          </div>
+        </div>
+        <!-- Second Section -->
+        <div
+          class="w-full flex flex-col xl:flex-row w-[90%] xl:w-[80%] border-b-2 xl:space-x-20 py-10 space-y-6 xl:space-y-0 px-5 xl:px-0"
+        >
+          <!-- Menu -->
+          <div class="flex flex-col space-y-3">
+            <h1 class="font-semibold text-[1.3em] xl:mb-2">Menu</h1>
+            <a href="#" class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+              >Home</a
+            >
+            <a href="#" class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+              >Our Content</a
+            >
+            <a href="#" class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+              >Pricing</a
+            >
+            <a href="#" class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+              >About</a
+            >
+          </div>
+          <!-- Categories -->
+          <div class="flex flex-col space-y-3 items">
+            <h1 class="font-semibold text-[1.3em] xl:mb-2">
+              Popular Categories
+            </h1>
+
+            <div class="flex flex-col xl:flex-row xl:space-x-10">
+              <!-- left categories -->
+              <div class="flex flex-col space-y-3">
+                <a
+                  href="#"
+                  class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+                  >Management & Leadership</a
+                >
+                <a
+                  href="#"
+                  class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+                  >Business</a
+                >
+                <a
+                  href="#"
+                  class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+                  >Entrepreneurship</a
+                >
+                <a
+                  href="#"
+                  class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+                  >Money & Finance</a
+                >
+              </div>
+              <!-- right categories -->
+              <div class="flex flex-col space-y-3">
+                <a
+                  href="#"
+                  class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+                  >Career & Success</a
+                >
+                <a
+                  href="#"
+                  class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+                  >Productivity</a
+                >
+                <a
+                  href="#"
+                  class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+                  >Health & Well-Being</a
+                >
+                <a
+                  href="#"
+                  class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+                  >Communication</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Popular Books -->
+          <div class="flex flex-col space-y-3">
+            <h1 class="font-semibold text-[1.3em] xl:mb-2">
+              Most Popular Books
+            </h1>
+            <a href="#" class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+              >Forgotten Time</a
+            >
+            <a href="#" class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+              >The Shadow</a
+            >
+            <a href="#" class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+              >God of Titans</a
+            >
+            <a href="#" class="text-[1.1em] text-gray-500 hover:text-yellow-500"
+              >Storm Lords</a
+            >
+          </div>
+          <!-- Contact Us -->
+          <div class="flex flex-col space-y-3">
+            <h1 class="font-semibold text-[1.3em] xl:mb-2">Contact Me</h1>
+            <a
+              href="mailto:camahalandarwin@gmail.com"
+              class="text-[1.1em]font-semibold"
+            >
+              <span class="flex items-center">
+                <img
+                  class="w-5 h-auto mr-2"
+                  src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000"
+                  alt="Email Icon"
+                />
+                <p class="pb-1 font-semibold">camahalandarwin@gmail.com</p>
+              </span>
+            </a>
+
+            <a href="tel:+639754270609" class="text-[1.1em]font-semibold">
+              <span class="flex items-center">
+                <img
+                  class="w-5 h-auto mr-2"
+                  src="https://img.icons8.com/?size=100&id=9730&format=png&color=000000"
+                  alt="Phone Icon"
+                />
+                <p class="pb-1 font-semibold">+63 9754270609</p>
+              </span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/darwincamahalan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[1.1em]font-semibold"
+            >
+              <span class="flex items-center">
+                <img
+                  class="w-5 h-auto mr-2"
+                  src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000"
+                  alt="LinkedIn Icon"
+                />
+                <p class="pb-1 font-semibold">LinkedIn</p>
+              </span>
+            </a>
+
+            <a
+              href="https://github.com/DarwinCamahalan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[1.1em]font-semibold"
+            >
+              <span class="flex items-center">
+                <img
+                  class="w-5 h-auto mr-2"
+                  src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
+                  alt="LinkedIn Icon"
+                />
+                <p class="pb-1 font-semibold">GitHub</p>
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- Last Section -->
+        <div
+          class="w-[95%] xl:w-[80%] flex flex-col xl:flex-row xl:space-x-3 py-5 font-semibold items-start space-y-4 xl:space-y-0"
+        >
+          <p>Copyright &#169; 2024</p>
+          <span class="hidden xl:block">•</span>
+          <p>All Rights Reserved</p>
+          <span class="hidden xl:block">•</span>
+          <a href="#" class="hover:text-yellow-500">Privacy</a>
+          <span class="hidden xl:block">•</span>
+          <a href="#" class="hover:text-yellow-500">Terms</a>
+        </div>
+      </footer>
     </div>
 
     <!-- JAVASCRIPT -->
@@ -611,8 +877,10 @@
       function toggleMenu(isOpen) {
         if (isOpen) {
           document.getElementById("sidebar").style.display = "block";
+          document.getElementById("main").style.display = "none";
         } else {
           document.getElementById("sidebar").style.display = "none";
+          document.getElementById("main").style.display = "block";
         }
       }
     </script>
