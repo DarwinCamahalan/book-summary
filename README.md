@@ -1,7 +1,7 @@
 ### Personal Details
 #### Name: Darwin Camahalan
 #### Email: camahalandarwin@gmail.com
-#### Website: [book-summary-demo.vercel.app](book-summary-demo.vercel.app) 
+#### Website: <a href="book-summary-demo.vercel.app" target="_blank">book-summary-demo.vercel.app</a>
 ----
 ## Main Banner
 ![image](https://github.com/DarwinCamahalan/junior-webdev-application-july-2024-digitalcart/assets/120079195/7b4d92dc-2416-40f3-8953-c2eefe471527)
